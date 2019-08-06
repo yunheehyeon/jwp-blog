@@ -28,3 +28,17 @@
 * 로그인 중이면 로그인, 회원 가입 화면 접근 -> 메인 화면
 * 로그인 유저만 해당 유저 수정페이지 접근 가능  
 * 로그 아웃 - 로그아웃 메인화면 
+
+# 댓글 관련 기능 구현
+
+* 댓글 작성 - POST /comments/{articleId}
+* 댓글 조회 - article 조회 할 때 같이
+* 댓글 수정 - PUT /comments/{articleId}/{commentId}
+* 댓글 삭제 - DELETE /comments/{articleId}/{commentId}
+
+# 비동기 통신&API / 댓글 추가 기능 구현
+
+* 댓글 작성 - POST /comments/{articleId}
+* 댓글 조회 - get /comments/{articleId}
+* 댓글 수정 - PUT /comments/{articleId}/{commentId}
+* 댓글 삭제 - DELETE /comments/{articleId}/{commentId}

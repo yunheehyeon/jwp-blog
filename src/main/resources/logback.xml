@@ -7,6 +7,23 @@
         </layout>
     </appender>
 
+    <appender name="ROLLING-FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/myblog.log</file>
+        <!-- 날짜 기준에 따라 로그파일 롤링 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 롤링될 로그 파일 패턴 지정 패턴에 따라서 파일 생성, dd 하루, hh 시간-->
+            <fileNamePattern>myblog.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <!-- maxHistory=14이면 14일 이후의 로그파일 삭제  -->
+            <maxHistory>14</maxHistory>
+            <!-- 로그파일들의 총 용량 제한 -->
+            <totalSizeCap>20GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <!-- 로그 출력 패턴 지정 -->
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
     <!-- 자바 패키지별 log level을 설정한다. -->
     <logger name="core" level="DEBUG"/>
 

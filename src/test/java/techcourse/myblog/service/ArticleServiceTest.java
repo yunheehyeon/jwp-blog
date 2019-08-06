@@ -10,7 +10,6 @@ import techcourse.myblog.domain.article.ArticleDto;
 import techcourse.myblog.domain.article.ArticleRepository;
 import techcourse.myblog.domain.user.UserDto;
 import techcourse.myblog.domain.user.UserInfoDto;
-import techcourse.myblog.domain.user.UserRepository;
 
 import java.util.Arrays;
 import java.util.Optional;

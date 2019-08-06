@@ -125,7 +125,7 @@
 <script th:inline="javascript">
     const initValue = [[${article.contents}]];
 
-    const contents = [[ ${error}]];
+    const contents = [[${error}]];
 
     if (contents != null) {
         alert(contents);
@@ -210,7 +210,19 @@
             init: init
         };
     })();
+
     TODOAPP.init();
+</script>
+
+<script>
+    const articleId = "[[${article.id}]]";
+
+    fetch("/comments/" + articleId)
+        .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(err => console.log(err));
+
+
 </script>
 </body>
 </html>
